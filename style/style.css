@@ -157,6 +157,8 @@ input[type ="submit"]{
     top: 100px;
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .card{
@@ -164,6 +166,13 @@ input[type ="submit"]{
     perspective: 1000px;
     width: 240px;
     height: 360px;
+    margin: 20px;
+}
+
+.flip-card-inner{
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    background-color: transparent;
 }
 
 .card:hover .flip-card-inner {
@@ -182,6 +191,15 @@ input[type ="submit"]{
 
 .flip-card-back{
     transform: rotateY(180deg);
+}
+
+.flip-card-front>img{
+    height: 240px;
+    width: 100%;
+    opacity: .8;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: white;
 }
 
 @media screen and (max-width: 600px){
@@ -239,5 +257,9 @@ input[type ="submit"]{
         border-radius: 0;
         opacity: .6;
         height: 300px
+    }
+
+    .cards{
+        flex-direction: column;
     }
 }
