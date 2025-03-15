@@ -1,0 +1,243 @@
+/*
+    Michael Kellems
+    CIT 312
+    Prof. Kane
+    Date
+*/
+
+html{
+    font-family: "Montserrat";
+}
+
+header>a>img{
+    position: fixed;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin: 5px;
+}
+
+header>h1{
+    margin: 0 auto;
+    height: 60px;
+    padding: 10px;
+    font-family: "Montserrat Underline";
+}
+
+nav{
+    height:20px;
+    width:100%;
+    position: fixed;
+    top:60px;
+    left: 0;
+    margin:0;
+    box-sizing: content-box;
+    z-index: 1;
+}
+
+nav>ul{
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+
+nav>ul>li{
+    box-sizing: content-box;
+    display: inline;
+    width: 33.33%;
+    text-align: center;
+    margin-top: -16px;
+    height: 20px;
+}
+
+li>a{
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+}
+
+#hamburger-home{
+    transform: translateX(-100%);
+    z-index: 1;
+}
+
+#hamburger{
+    transform: translateX(-100%);
+    z-index: 1;
+}
+
+#exitbutton{
+    transform: translateX(-100%);
+}
+
+#about{
+    box-sizing: border-box;
+    position: absolute;
+    top: 100px;
+    left: 5%;
+    width: 90%;
+    height: 400px;
+    border-radius: 20px;
+}
+
+#about>p{
+    margin: 20px;
+    text-indent: 20px;
+}
+
+#about>h1{
+    font-family: "Montserrat Underline";
+    width:100%;
+    text-align: center;
+}
+
+#homephoto{
+    position: absolute;
+    width: 90%;
+    height: 600px;
+    top: 560px;
+    left: 5%;
+    opacity: .8;
+    border-radius: 20px;
+    margin-bottom: 200px;
+}
+
+body>#servicesform{
+    box-sizing: border-box;
+    position: absolute;
+    width: 90%;
+    height: 600px;
+    left: 5%;
+    top: 100px;
+    border-radius: 20px;
+}
+
+body>#servicesform>#submitbutton{
+    position: absolute;
+    height: 40px;
+    width: 100px;
+    bottom: 0;
+    right: 0;
+    box-sizing: border-box;
+    box-shadow: none;
+    border-top-left-radius: 20px;
+}
+
+body>#servicesform>#submitbutton:hover{
+    width:110px;
+    height:45px;
+}
+
+body>#servicesform>h1{
+    width: 100%;
+    font-family: "Montserrat Underline";
+    text-align: center;
+}
+
+label{
+    margin: 20px;
+}
+
+input{
+    margin: 20px;
+    box-sizing: border-box;
+}
+
+input[type ="submit"]{
+    margin: 0;
+}
+
+#cards{
+    position: absolute;
+    width: 90%;
+    left: 5%;
+    top: 100px;
+    display: flex;
+    flex-direction: row;
+}
+
+.card{
+    background-color: transparent;
+    perspective: 1000px;
+    width: 240px;
+    height: 360px;
+}
+
+.card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 240px;
+  height: 360px;
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.flip-card-back{
+    transform: rotateY(180deg);
+}
+
+@media screen and (max-width: 600px){
+    #navbar-home{
+        margin-top: 5px;
+    }
+
+    nav{
+        transform: translateX(-100%);
+        height: calc(100% - 60px);
+        width: 160px;
+    }
+
+    nav>ul{
+        flex-direction: column;
+        height: 100%
+    }
+
+    nav>ul>li{
+        position: relative;
+        width: 160px;
+        margin-top: 20px;
+        border: none;
+    }
+
+    #hamburger-home{
+        transform: translateX(0);
+    }
+
+    #hamburger{
+        transform: translateX(0);
+    }
+
+    
+    nav:target{
+        transform: translateX(0);
+    }
+
+    #exitbutton{
+        transform: translateX(0);
+        margin: 5px;
+    }
+
+    #about{
+        width: 100%;
+        left: 0;
+        top: 60px;
+        border-radius: 0;
+    }
+
+    #homephoto{
+        width: 100%;
+        left: 0;
+        top: 460px;
+        border-radius: 0;
+        opacity: .6;
+        height: 300px
+    }
+}

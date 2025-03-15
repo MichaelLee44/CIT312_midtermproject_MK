@@ -1,0 +1,176 @@
+/*
+    Michael Kellems
+    CIT 312
+    Prof. Kane
+    Date
+*/
+
+@primary-color: #AA5500;
+@secondary-color: #FFDDAA;
+@tertiary-color: #D97D50;
+
+html{
+    background-color: @secondary-color;
+}
+
+.hamburger{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    top: 60px;
+    left: 0;
+}
+
+.headerstyle{
+    background-color: @primary-color;
+    color: @secondary-color;
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: 1;
+}
+
+header{
+    .headerstyle;
+}
+
+header>a>img{
+    border: 2px solid @secondary-color;
+}
+
+nav{
+    background-color: @tertiary-color;
+}
+
+nav>ul{
+    color: @secondary-color;
+    text-decoration: none;
+}
+
+nav>ul>li{
+    color: @secondary-color;
+}
+
+nav>ul>li~li{
+    border-left: 2px solid @secondary-color;
+}
+
+nav>ul>li:hover{
+    background-color: @secondary-color;
+    color: @tertiary-color;
+    border-color: @tertiary-color;
+}
+
+
+#hamburger-home{
+    .hamburger;
+    margin-top: 10px;
+    color: @secondary-color
+}
+
+#hamburger{
+    .hamburger;
+    color: @primary-color;
+}
+
+#exitbutton{
+    color: @secondary-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#about{
+    background-color: @primary-color;
+    color: @secondary-color;
+    border: 2px solid @tertiary-color;
+}
+
+body>#servicesform{
+    background-color: @primary-color;
+    color: @secondary-color;
+    border: 5px solid @tertiary-color;
+}
+
+body>#servicesform>#submitbutton{
+    border: none;
+    background-color: @tertiary-color;
+    color: @secondary-color;
+}
+
+body>#servicesform>#serviceselect{
+    box-sizing: border-box;
+    background-color: @secondary-color;
+    color: @tertiary-color;
+    border: 2px solid @tertiary-color;
+    box-shadow: none;
+    width: 220px;
+    height: 20px;
+    margin: 20px;
+    margin-top: 0;
+}
+
+input[type = "date"]{
+    background-color: @secondary-color;
+    border: 2px solid @tertiary-color;
+    color: @tertiary-color;
+    width: 310px; 
+    height: 20px;
+    margin-top: 0;
+}
+
+input[name = "End date"]{
+    margin-left: 25px;
+}
+
+textarea{
+    box-sizing: border-box;
+    box-shadow: none;
+    background-color: @secondary-color;
+    color: @tertiary-color;
+    border: 2px solid @tertiary-color;
+    height: 20px;
+    width: 210px;
+    margin: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.flip-card-front{
+    background-color: @tertiary-color;
+}
+
+.flip-card-back{
+    background-color: @primary-color;
+}
+
+@media screen and (max-width: 600px){
+    nav>ul>li~li{
+        border-left: none;
+    }
+
+    #about{
+        border: none;
+        border-top: 5px solid @secondary-color;
+    }
+
+    body>#servicesform>#serviceselect{
+        width: 250px;
+    }
+
+    input[type = "date"]{
+        width: 250px;
+    }
+
+    input[name = "End date"]{
+        margin-left: 20px;
+    }
+
+    textarea{
+        width: 250px;
+    }
+}

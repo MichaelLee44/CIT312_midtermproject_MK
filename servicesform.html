@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<!--
+    Michael Kellems
+    CIT 312
+    Prof. Kane
+    Date
+-->
+
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content = "IE=Edge">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <title>Meals by Michael</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat+Underline:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+        <link href = "style/style.css" type = "text/css" rel = "stylesheet"></link>
+        <link href = "style/style.less" type = "text/css" rel = "stylesheet/less"></link>   
+        <link rel = "icon" href = "favicon/favicon.ico"><link>
+        <script src="https://cdn.jsdelivr.net/npm/less" ></script>
+        <script src="https://kit.fontawesome.com/8eec602fba.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <a href = "index.html"><img src = "favicon/android-chrome-192x192.png"></img></a>
+            <h1>Meals by Michael</h1>
+        </header>
+
+        <a id = "hamburger" href = "#navbar"><i class="fa-solid fa-bars"></i></a>
+
+        <nav id = "navbar">
+            <a href = "#" id = "exitbutton">
+                <i class="fa-solid fa-x"></i>
+            </a>
+            <ul>
+                <li><a href = "index.html">Home</a></li>
+                <li><a href = "recipes.html">Recipes</a></li>
+                <li><a href = "servicesform.html">Request Services</a></li>
+            </ul>
+        </nav>
+
+        <form id = "servicesform" action = "" method = "get">
+            <h1>Service Request Form</h1>
+
+            <label>What service would you like?</label>
+            <select id = "serviceselect" placeholder = "select">
+                <option>Catering</option>
+                <option>Private Chef</option>
+                <option>Other (explain in notes)</option>
+            </select><br></br>
+
+            <label>Service start date:</label>
+            <input type = "date" name = "Start date"></input><br></br>
+
+            <label>Service end date:</label>
+            <input type = "date" name = "End date"></input><br></br>
+
+            <label>Additional notes & comments:</label>
+            <textarea name = "notes" placeholder="Type here..."></textarea>
+
+            <input type = "submit" id = "submitbutton" value = "Submit!"></input>
+        </form>
+    </body>
+</html>
